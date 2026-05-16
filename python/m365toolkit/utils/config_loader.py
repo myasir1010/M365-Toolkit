@@ -17,10 +17,8 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import json
 from pathlib import Path
 
 def load_config(path):
     return json.loads(Path(path).read_text(encoding="utf-8"))
-r

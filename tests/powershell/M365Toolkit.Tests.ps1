@@ -4,4 +4,3 @@ Describe 'M365Toolkit module' {
         Get-Command Connect-M365Toolkit | Should -Not -BeNullOrEmpty
     }
 }
-r

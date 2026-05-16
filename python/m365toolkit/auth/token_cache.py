@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 from dataclasses import dataclass
 from datetime import datetime
 
@@ -26,4 +25,3 @@ class TokenCacheInfo:
     created_at: datetime
     expires_in: int
     token_type: str = "Bearer"
-r

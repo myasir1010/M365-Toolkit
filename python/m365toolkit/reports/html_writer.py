@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 from pathlib import Path
 import html
 
@@ -30,4 +29,3 @@ def write_html_table(path, title, rows):
     Path(path).parent.mkdir(parents=True, exist_ok=True)
     Path(path).write_text(doc, encoding='utf-8')
     return path
-r

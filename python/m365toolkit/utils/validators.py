@@ -17,9 +17,7 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 def require(value, name):
     if value in (None, ""):
         raise ValueError(f"{name} is required")
     return value
-r

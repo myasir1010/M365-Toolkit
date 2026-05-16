@@ -17,10 +17,8 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import logging
 
 def get_logger(name="m365toolkit"):
     logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
     return logging.getLogger(name)
-r

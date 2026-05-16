@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import csv
 from pathlib import Path
 
@@ -32,4 +31,3 @@ def write_csv(path, rows):
         writer.writeheader()
         writer.writerows(rows)
     return path
-r

@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import argparse, csv
 from m365toolkit.reports.html_writer import write_html_table
 
@@ -31,4 +30,3 @@ if __name__ == "__main__":
         rows = list(csv.DictReader(f))
     write_html_table(args.output, args.title, rows)
     print(f"Dashboard written to {args.output}")
-r

@@ -17,11 +17,9 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import csv
 from pathlib import Path
 
 def read_mailbox_report(path: str):
     with Path(path).open(newline='', encoding='utf-8') as f:
         return list(csv.DictReader(f))
-r

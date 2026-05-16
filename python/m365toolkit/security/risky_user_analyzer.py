@@ -17,10 +17,8 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 def group_by_risk_level(users):
     result = {}
     for user in users:
         result.setdefault(user.get("riskLevel", "unknown"), []).append(user)
     return result
-r

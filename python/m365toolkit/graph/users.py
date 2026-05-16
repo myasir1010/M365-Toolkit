@@ -17,9 +17,7 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 from .graph_client import GraphClient
 
 def list_items(client: GraphClient):
     return list(client.paged("/users"))
-r
