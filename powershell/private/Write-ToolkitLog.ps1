@@ -18,7 +18,7 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function Write-ToolkitLog {
     [CmdletBinding()]
     param(
@@ -35,4 +35,3 @@ function Write-ToolkitLog {
     elseif ($Level -eq 'WARNING') { Write-Warning $Message }
     else { Write-Verbose $Message }
 }
-r

@@ -18,9 +18,8 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function New-M365Group { [CmdletBinding(SupportsShouldProcess)] param([Parameter(Mandatory)][string]$DisplayName,[string]$Description,[switch]$MailEnabled,[switch]$SecurityEnabled,[string]$MailNickname)
     if (-not $MailNickname) { $MailNickname = ($DisplayName -replace '[^a-zA-Z0-9]','').ToLower() }
     if ($PSCmdlet.ShouldProcess($DisplayName,'Create group')) { New-MgGroup -DisplayName $DisplayName -Description $Description -MailEnabled:$MailEnabled -MailNickname $MailNickname -SecurityEnabled:$SecurityEnabled }
 }
-r

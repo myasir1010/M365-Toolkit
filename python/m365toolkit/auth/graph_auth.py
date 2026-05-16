@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import os
 from dataclasses import dataclass
 import msal
@@ -52,4 +51,3 @@ class GraphAuthenticator:
         if "access_token" not in result:
             raise RuntimeError(f"Failed to acquire token: {result}")
         return result["access_token"]
-r

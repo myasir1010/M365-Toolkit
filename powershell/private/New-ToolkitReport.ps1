@@ -18,7 +18,7 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function New-ToolkitReport {
     [CmdletBinding()]
     param(
@@ -36,4 +36,3 @@ function New-ToolkitReport {
     }
     Get-Item $OutputPath
 }
-r

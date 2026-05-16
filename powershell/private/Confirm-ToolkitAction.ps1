@@ -18,7 +18,7 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function Confirm-ToolkitAction {
     [CmdletBinding()]
     param(
@@ -29,4 +29,3 @@ function Confirm-ToolkitAction {
     $Answer = Read-Host "$Message Type YES to continue"
     return ($Answer -eq 'YES')
 }
-r

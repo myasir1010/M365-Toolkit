@@ -18,8 +18,7 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function Find-M365UnusedLicenses { [CmdletBinding()] param()
     Get-M365LicenseOverview | Where-Object { $_.Available -gt 0 } | Sort-Object Available -Descending
 }
-r

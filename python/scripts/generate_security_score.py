@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import argparse
 from m365toolkit.security.score_calculator import calculate_security_score
 
@@ -29,4 +28,3 @@ if __name__ == "__main__":
     parser.add_argument("--stale-devices", type=int, default=0)
     args = parser.parse_args()
     print(calculate_security_score(args.users_without_mfa, args.risky_users, args.privileged_users, args.stale_devices))
-r

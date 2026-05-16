@@ -18,11 +18,10 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function Export-M365LicenseReport { [CmdletBinding()] param([string]$OutputPath='./reports/csv/m365-license-report.csv')
     $Users = Get-MgUser -All -Property DisplayName,UserPrincipalName,AssignedLicenses,AccountEnabled
     $Report = foreach ($User in $Users) { [pscustomobject]@{ DisplayName=$User.DisplayName; UserPrincipalName=$User.UserPrincipalName; AccountEnabled=$User.AccountEnabled; LicenseSkuIds=($User.AssignedLicenses.SkuId -join ';') } }
     $Report | Export-Csv $OutputPath -NoTypeInformation -Encoding UTF8
     Get-Item $OutputPath
 }
-r

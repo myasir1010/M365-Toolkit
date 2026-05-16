@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import time
 
 def retry(func, attempts=3, delay=1):
@@ -29,4 +28,3 @@ def retry(func, attempts=3, delay=1):
             last_error = exc
             time.sleep(delay * (2 ** attempt))
     raise last_error
-r

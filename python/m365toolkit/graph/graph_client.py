@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 from __future__ import annotations
 import time
 from typing import Any, Dict, Iterable, Optional
@@ -62,4 +61,3 @@ class GraphClient:
             if not next_link:
                 break
             data = self.get(next_link)
-r

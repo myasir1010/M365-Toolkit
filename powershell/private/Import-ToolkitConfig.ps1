@@ -18,11 +18,9 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
 function Import-ToolkitConfig {
     [CmdletBinding()]
     param([Parameter(Mandatory)][string]$Path)
     if (-not (Test-Path $Path)) { throw "Config file not found: $Path" }
     Get-Content -Path $Path -Raw -Encoding UTF8 | ConvertFrom-Json
 }
-r

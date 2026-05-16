@@ -18,8 +18,7 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function Sync-M365GroupMembershipFromCsv { [CmdletBinding(SupportsShouldProcess)] param([Parameter(Mandatory)][string]$CsvPath,[Parameter(Mandatory)][string]$GroupId)
     Import-Csv $CsvPath | ForEach-Object { if ($_.UserPrincipalName) { Add-M365GroupMember -GroupId $GroupId -UserPrincipalName $_.UserPrincipalName } }
 }
-r

@@ -18,7 +18,6 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
 function Connect-M365Toolkit {
     [CmdletBinding()]
     param(
@@ -61,4 +60,3 @@ function Connect-M365Toolkit {
     }
     [pscustomobject]$script:M365ToolkitContext
 }
-r

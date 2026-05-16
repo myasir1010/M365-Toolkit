@@ -17,7 +17,6 @@
 .NOTES
     Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
 """
-r
 import argparse
 from m365toolkit.auth.graph_auth import GraphAuthenticator
 from m365toolkit.graph.graph_client import GraphClient
@@ -40,4 +39,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-r
