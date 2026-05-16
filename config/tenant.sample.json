@@ -1,0 +1,8 @@
+{
+  "tenant_id": "00000000-0000-0000-0000-000000000000",
+  "domain": "contoso.onmicrosoft.com",
+  "sharepoint_admin_url": "https://contoso-admin.sharepoint.com",
+  "default_usage_location": "DE",
+  "reports_path": "./reports",
+  "log_path": "./logs/m365-toolkit.log"
+}

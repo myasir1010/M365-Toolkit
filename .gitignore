@@ -1,0 +1,29 @@
+# PowerShell
+*.ps1xml
+*.pssc
+*.psrc
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.env
+
+# Secrets
+config/*.json
+!config/*.sample.json
+*.pfx
+*.key
+*.pem
+
+# Outputs
+logs/
+reports/csv/*
+reports/html/*
+reports/json/*
+data/output/*
+!reports/csv/.gitkeep
+!reports/html/.gitkeep
+!reports/json/.gitkeep
+!data/output/.gitkeep
+r

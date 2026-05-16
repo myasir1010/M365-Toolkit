@@ -1,0 +1,25 @@
+"""
+.SYNOPSIS
+    Graph audit_logs helpers.
+
+.DESCRIPTION
+    Provides helper functions for Microsoft Graph audit_logs.
+
+.AUTHOR
+    Muhammad Yasir
+
+.CREATED
+    2026-05-15
+
+.COPYRIGHT
+    Copyright (c) 2026 Muhammad Yasir. All rights reserved.
+
+.NOTES
+    Configure Azure app registration details in config/appsettings.sample.json or environment variables before use.
+"""
+r
+from .graph_client import GraphClient
+
+def list_items(client: GraphClient):
+    return list(client.paged("/auditLogs/directoryAudits"))
+r

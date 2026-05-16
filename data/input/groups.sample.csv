@@ -1,0 +1,2 @@
+GroupName,Description,MailEnabled,SecurityEnabled
+All Employees,Default employee group,false,true

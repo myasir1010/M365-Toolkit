@@ -1,0 +1,18 @@
+{
+  "delegated_scopes": [
+    "User.Read.All",
+    "Group.ReadWrite.All",
+    "Directory.ReadWrite.All",
+    "AuditLog.Read.All",
+    "Reports.Read.All",
+    "Policy.Read.All"
+  ],
+  "application_permissions": [
+    "User.Read.All",
+    "Group.ReadWrite.All",
+    "Directory.ReadWrite.All",
+    "AuditLog.Read.All",
+    "Reports.Read.All",
+    "Sites.Read.All"
+  ]
+}
