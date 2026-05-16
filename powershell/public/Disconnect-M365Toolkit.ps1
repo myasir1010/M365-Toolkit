@@ -18,7 +18,6 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
 function Disconnect-M365Toolkit {
     [CmdletBinding()]
     param()
@@ -29,4 +28,3 @@ function Disconnect-M365Toolkit {
     $script:M365ToolkitContext = $null
     Write-Host 'M365 Toolkit sessions disconnected.' -ForegroundColor Green
 }
-r
