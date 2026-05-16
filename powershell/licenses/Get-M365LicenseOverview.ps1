@@ -18,10 +18,9 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 function Get-M365LicenseOverview { [CmdletBinding()] param([string]$OutputPath)
     $Data = Get-MgSubscribedSku -All | Select-Object SkuPartNumber,SkuId,@{n='Enabled';e={$_.PrepaidUnits.Enabled}},ConsumedUnits,@{n='Available';e={$_.PrepaidUnits.Enabled - $_.ConsumedUnits}}
     if ($OutputPath) { $Data | Export-Csv $OutputPath -NoTypeInformation -Encoding UTF8 }
     $Data
 }
-r
