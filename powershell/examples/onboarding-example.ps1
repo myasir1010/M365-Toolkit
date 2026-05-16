@@ -18,7 +18,7 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 Import-Module ..\M365Toolkit.psd1 -Force
 Connect-M365Toolkit -Graph -Scopes 'User.ReadWrite.All','Directory.ReadWrite.All'
 New-M365User -UserPrincipalName 'jane.doe@contoso.com' -DisplayName 'Jane Doe' -GivenName 'Jane' -Surname 'Doe' -Password 'ChangeMe-12345!' -UsageLocation 'DE' -WhatIf

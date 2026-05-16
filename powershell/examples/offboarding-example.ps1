@@ -18,7 +18,7 @@
     Run PowerShell as Administrator when local or Active Directory permissions are required.
     Configure app permissions, delegated permissions, or admin consent before running tenant-level automation.
 #>
-r
+
 Import-Module ..\M365Toolkit.psd1 -Force
 Connect-M365Toolkit -Graph -ExchangeOnline -Scopes 'User.ReadWrite.All','Group.ReadWrite.All','Directory.ReadWrite.All'
 Invoke-M365UserOffboarding -UserPrincipalName 'john.doe@contoso.com' -RemoveLicenses -RemoveGroups -ConvertToSharedMailbox -WhatIf
